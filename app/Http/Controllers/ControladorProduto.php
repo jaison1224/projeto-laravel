@@ -17,11 +17,16 @@ class ControladorProduto extends Controller
     {
         $pros = Produto::all();
         $cats = Categoria::all();
-    
-        return view('produto', compact('pros', 'cats'));
-       
+       return view('produto', compact('pros', 'cats'));
     }
+    //Exibir todos os produtos na pagina inicio para demonstraçao 
+    public function inicio()
+    {
+        $pros = Produto::all();
+        $cats = Categoria::all();
 
+        return view('inicio', compact('pros', 'cats'));
+    }
     /**
      * Show the form for creating a new resource.
      *
@@ -60,7 +65,7 @@ class ControladorProduto extends Controller
      */
     public function show($id)
     {
-        //
+       
     }
 
     /**
@@ -101,6 +106,7 @@ class ControladorProduto extends Controller
      */
     public function destroy($id)
     {
-        //
+        Produto::where('id', $id)->delete();
+        return redirect('produto');
     }
 }

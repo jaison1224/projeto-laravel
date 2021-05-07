@@ -1,17 +1,13 @@
 <x-app-layout>
     <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Dashboard') }}
+        <h2 class="font-semibold text-xl text-white-800 leading-tight">
+            {{ __('Editar Produto') }}
         </h2>
     </x-slot>
 <div class="card border">
     <div class="card-body">
-        <h5 class="card-title">Novo Produto</h5>
         <form action="/update/produto/{{$pro->id}}" method="get" >
             <div class="form-row">
-                <div class="col-2">
-                    <input class="form-control" type="text" value="{{$pro->id}}"/>
-                </div>
                 <div class="col-2">
                     <input class="form-control" type="text" value="{{$pro->nome}}" name="nome"/>
                 </div>

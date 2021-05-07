@@ -4,6 +4,7 @@
             {{ __('Dashboard') }}
         </h2>
     </x-slot>
+<div class="container">
     <div class="jumbotron bg-light border border-secondary" id="margem">
         <div class="row">
             <div class="card-deck">
@@ -29,4 +30,5 @@
             </div>
         </div>
     </div>
+</div>
 </x-app-layout>

@@ -14,8 +14,8 @@ use App\Http\Controllers\ControladorProduto;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/', [ControladorProduto::class, 'inicio'],function () {
+    return view('inicio');
 });
 
 Route::get('/index', function () {
@@ -29,7 +29,7 @@ Route::get('/novoproduto', [ControladorProduto::class, 'create']);
 Route::get('/criar/produto', [ControladorProduto::class, 'store']);
 Route::get('/produto/editar/{id}', [ControladorProduto::class, 'edit']);
 Route::get('/update/produto/{id}', [ControladorProduto::class, 'update']);
-Route::get('/produto/apagar', [ControladorProduto::class, 'destroy']);
+Route::get('/produto/apagar/{id}', [ControladorProduto::class, 'destroy']);
 
 //Rotas de categoria
 Route::get('/categoria', [ControladorCategoria::class, 'index'], function () {
