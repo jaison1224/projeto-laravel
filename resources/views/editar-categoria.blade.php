@@ -1,6 +1,7 @@
-@extends ('layout.app', ['current'=>'categoria']);
-
-@section('body')
+<x-app-layout>
+    <x-slot name="header">
+        <h5> Editar Categoria</h5>
+    </x-slot>
 <div class="card border">
     <div class="card-body">
         <h5 class="card-title">Editar Categoria</h5>
@@ -17,4 +18,4 @@
         </form>
     </div>
 </div>
-@endsection
+</x-app-layout>

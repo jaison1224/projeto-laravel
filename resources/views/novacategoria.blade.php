@@ -1,6 +1,7 @@
-@extends ('layout.app', ['current'=>'categoria']);
-
-@section('body')
+<x-app-layout>
+<x-slot name="header">
+    <h5>Cadastro de categorias</5>
+</x-slot>
 <div class="card border">
     <div class="card-body">
         <form action="/criar/categoria" method="get" >
@@ -10,4 +11,4 @@
         </form>
     </div>
 </div>
-@endsection
+</x-app-layout>

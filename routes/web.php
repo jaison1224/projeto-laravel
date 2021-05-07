@@ -21,13 +21,26 @@ Route::get('/', function () {
 Route::get('/index', function () {
     return view('index');
 })->middleware(['auth'])->name('index');
-
+//Rotas de produto
 Route::get('/produto', [ControladorProduto::class, 'index'], function () {
     return view('produto');
 })->middleware(['auth'])->name('produto');
+Route::get('/novoproduto', [ControladorProduto::class, 'create']);
+Route::get('/criar/produto', [ControladorProduto::class, 'store']);
+Route::get('/produto/editar/{id}', [ControladorProduto::class, 'edit']);
+Route::get('/update/produto/{id}', [ControladorProduto::class, 'update']);
+Route::get('/produto/apagar', [ControladorProduto::class, 'destroy']);
+
+//Rotas de categoria
 Route::get('/categoria', [ControladorCategoria::class, 'index'], function () {
     return view('categoria');
 })->middleware(['auth'])->name('categoria');
+Route::get('/novacategoria', [ControladorCategoria::class, 'create']);
+Route::get('/criar/categoria', [ControladorCategoria::class, 'store']);
+Route::get('/categoria/editar/{id}', [ControladorCategoria::class, 'edit']);
+Route::get('/editar/{id}', [ControladorCategoria::class, 'update']);
+Route::get('/categoria/apagar/{id}', [ControladorCategoria::class, 'destroy']);
+
 
 
 require __DIR__.'/auth.php';

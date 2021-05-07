@@ -28,7 +28,7 @@
         @endforeach
             </tbody>
         </table>
-        <a class="btn btn-sm btn-primary" href="/novacategoria">Nova Catoriga</a>
+        <a class="btn btn-sm btn-primary" href="/novacategoria">Nova Categoria</a>
     </div>
 </div>
 </x-app-layout>

@@ -30,8 +30,8 @@
                         @endif
                     @endforeach
                     <td>
-                        <a href="/categoria/editar/{{$pro->id}}" class="btn btn-sm btn-primary">Editar</a>
-                        <a href="/categoria/apagar/{{$pro->id}}" class="btn btn-sm btn-danger">Apagar</a>
+                        <a href="/produto/editar/{{$pro->id}}" class="btn btn-sm btn-primary">Editar</a>
+                        <a href="/produto/apagar/{{$pro->id}}" class="btn btn-sm btn-danger">Apagar</a>
                     </td>
                 </tr>
         @endforeach

@@ -65,7 +65,7 @@ class ControladorCategoria extends Controller
     public function edit($id)
     {
         $cat = Categoria::where('id', $id)->first();
-        return view('editar', compact('cat'));
+        return view('editar-categoria', compact('cat'));
     }
 
     /**
