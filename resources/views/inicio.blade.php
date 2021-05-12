@@ -20,35 +20,37 @@
             
     </head>
 <body>
-<div class="card border" id="margem">
+<div class="container" style="">
+<div class="row">
+
+@foreach($pros as $pro)
+<div class="col-sm-3" style="margin-top: 5vh; ">
+<div class="card" style="width: 18rem;">
+
+    <img class="card-img-top" src="..." alt="Card image cap">
     <div class="card-body">
-        <h5 class="card-title">Cadastro de Produto</h5>
-        <table class="table table-ordered table-hover">
-            <thead>
-                <tr>
-                    <th>Código</th>
-                    <th>Nome</th>
-                    <th>Preço</th>
-                    <th>Estoque</th>
-                    <th>Categoria</th>
-                </tr>
-            </thead>
-            <tbody>
-        @foreach($pros as $pro)
-                <tr>
-                    <td>{{$pro->id}}</td>
-                    <td>{{$pro->nome}}</td>
-                    <td>{{$pro->preco}}</td>
-                    <td>{{$pro->estoque}}</td>
-                    @foreach($cats as $cat)
-                        @if($pro->categoria_id==$cat->id)
-                            <td>{{$cat->nome}}</td>
-                        @endif
-                    @endforeach
-        @endforeach
-            </tbody>
-        </table>
+      <h5 class="card-title">{{$pro->nome}}</h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the cards content.</p>
     </div>
-</div>   
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Estoque: {{$pro->estoque}}</li>
+      <li class="list-group-item">Preço: {{$pro->preco}}</li>
+      @foreach($cats as $cat)
+                        @if($pro->categoria_id==$cat->id)
+                            <li class="list-group-item">Categoria: {{$cat->nome}}</li>
+                        @endif
+       @endforeach
+      
+    </ul>
+    <div class="card-body">
+      <a href="#" class="card-link">Card link</a>
+      <a href="#" class="card-link">Another link</a>
+    </div> 
+</div>
+</div>
+    @endforeach
+
+</div>
+</div>
 </body>
 </html>

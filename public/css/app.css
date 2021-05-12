@@ -49,8 +49,14 @@ Remove the margin in all browsers.
 body {
   margin: 0;
 }
-#margem {
+#margem-categoria {
   margin-top: 20px;
+  left: 16rem;
+}
+
+#margem-btn {
+  margin: 3px;
+  float: right;
 }
 /**
 Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3)

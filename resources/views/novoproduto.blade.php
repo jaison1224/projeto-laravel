@@ -7,7 +7,7 @@
 <div class="card border">
     <div class="card-body">
         <h5 class="card-title">Novo Produto</h5>
-        <form action="/criar/produto" method="get" >
+        <form action="/criar/produto" method="get" enctype="multipart/form-data">
             <div class="form-row">
                 <div class="col-2">
                     <input class="form-control" type="text" placeholder="Novo Produto" name="nome"/>
@@ -24,6 +24,7 @@
                         @endforeach
                     </select>
             </div>
+            <input type="file" name="image" id="image">
             <br>
             <button class="btn btn-ms btn-primary" id="right" type="submit">Criar</button>
         </form>
